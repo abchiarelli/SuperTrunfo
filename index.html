@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="code.js"></script>
+    <title>SuperTrunfo - SW</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1>SuperTrunfo: StarWars</h1>
+        <h3>Vença seu oponete em um duelo épico de naves do mundo de StarWars!</h3>
+
+        <div id="game-over"></div>
+
+        <div id="div-btn-start" style="display: block;">
+            <button id="btn-start-game" onclick="startGame()">Start Game</button>
+        </div>
+
+        <!-- DIV PLACAR -->
+        <div id="main-score">
+            <div id="div-score">
+                <div class="score" id="player-deck"></div>
+                <div class="score" id="table-deck"></div>
+                <div class="score" id="machine-deck"></div>
+            </div>
+        </div>
+
+        <!-- DIV PRINCIPAL DO DUELO -->
+        <div id="div-battle-main">
+
+            <!-- DIV CARTA JOGADOR -->
+            <div class="card-box" id="div-card-player">
+                <div class="card-name" id="div-card-player-name"></div>
+                <div class="img-box" id="div-card-player-img">
+                    <img class="element-img" id="img-card-player" src="" alt="" height="200px">
+                </div>
+                <div class="div-card-stats" id="div-card-player-stats">
+                    <div class="stat" id="div-card-player-stats-precisao"></div>
+                    <div class="stat" id="div-card-player-stats-destreza"></div>
+                    <div class="stat" id="div-card-player-stats-forca"></div>
+                    <div class="stat" id="div-card-player-stats-defesa"></div>
+                </div>
+            </div>
+
+            <!-- DIV VS. -->
+            <div id="div-versus">VS.</div>
+
+            <!-- DIV CARTA MAQUINA -->
+            <div class="card-box" id="div-card-machine">
+                <div class="card-name" id="div-card-machine-name"></div>
+                <div class="img-box" id="div-card-machine-img">
+                    <img class="element-img" id="img-card-machine" src="" alt="" height="200px">
+                </div>
+                <div class="div-card-stats" id="div-card-machine-stats">
+                    <div class="stat" id="div-card-machine-stats-precisao"></div>
+                    <div class="stat" id="div-card-machine-stats-destreza"></div>
+                    <div class="stat" id="div-card-machine-stats-forca"></div>
+                    <div class="stat" id="div-card-machine-stats-defesa"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="buttons-to-play">
+            <button class="buttons-to-play" id="btn-play" onclick="play()">Atacar</button>
+            <button class="buttons-to-play" id="btn-next-duel" disabled="true" onclick="nextDuel()">Proximo Duelo
+                >></button>
+        </div>
+
+        <div id="mensagem-resultado"></div>
+
+    </div>
+</body>
+
+</html>

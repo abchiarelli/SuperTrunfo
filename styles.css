@@ -1,0 +1,236 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 800;
+    color: orange;
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 0%;
+}
+
+h3 {
+    color: orange;
+    margin-top: 10px;
+}
+
+body {
+    background: linear-gradient(180deg, #111111 5%, #615f70 300%);
+}
+
+html {
+    height: 100%;
+}
+
+#div-battle-main {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+#main-score {
+    margin-top: 50px;
+    background-color: dimgray;
+
+    padding-top: 15px;
+    border-radius: 10px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: gray;
+
+    border-radius: 10px;
+
+    width: 200px;
+    margin: 10px;
+}
+
+.points {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.final-message {
+    color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 200;
+}
+
+#win {
+    color: yellowgreen;
+    font-size: 100px;
+    font-weight: 900;
+
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#lose {
+    color: orangered;
+    font-size: 100px;
+    font-weight: 900;
+
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 210px;
+    height: 320px;
+    background-color: dimgray;
+
+    padding: 10px;
+    border-radius: 10px 10px 80px 10px;
+}
+
+.img-box {
+    width: 200px;
+    height: 200px;
+    background-color: #0e0b1f;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url("https://img.freepik.com/free-photo/3d-hyperspace-background-with-warp-tunnel-effect_1048-12526.jpg");
+    background-size:cover;
+    background-position: -20px 0px;
+    background-blend-mode:exclusion ;
+}
+
+.element-img {
+    width: 80%;
+    height: auto;
+}
+
+#div-versus {
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 600;
+
+    display: none;
+
+    color: aliceblue;
+}
+
+#div-btn-start {
+    display: block;
+    margin-top: 50px;
+}
+
+#btn-start-game {
+    font-size: 24px;
+
+    padding: 10px;
+    background-color:gray;
+    border-radius: 10px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-score {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-card-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+
+    background-color: grey;
+    width: 200px;
+    height: 80px;
+    border-radius: 7px 7px 60px 7px;
+}
+
+.stat {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    background-color: gray;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 5px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+}
+
+#imgStats {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#p-card-name {
+    margin-left: 8px;
+}
+
+#buttons-to-play {
+    margin-top: 40px;
+
+    display: none;
+}
+
+#div-card-machine {
+    display: none;
+}
+
+
+#div-score {
+    display: flex;
+    flex-direction: row;
+}
+
+#mensagem-resultado {
+    margin-top: 30px;
+
+    color: aliceblue;
+    font-size: 20px;
+
+    display: none;
+}
