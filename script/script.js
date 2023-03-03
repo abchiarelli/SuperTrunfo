@@ -316,7 +316,7 @@ function play() {
     resolveBattle(getRadioSelected());
     changePlayButtons();
   } else {
-    window.alert("Selecione com qual atributo você era duelar")
+    window.alert("Selecione com qual atributo você irá duelar")
   }
 }
 
@@ -355,25 +355,25 @@ function resolveBattle(selectedStatus) {
   if (playerStatusValue > machineStatusValue) {
     rodadaJogador();
     imprimeQuantidades();
-    var message = "Muito bem! Você conseguiu superar a " + selectedStatus + " do adversário."
+    var message = "Utilizou " + selectedStatus + " para atacar.<br>Muito bem! Você conseguiu superar a " + selectedStatus + " do adversário."
     showMessage(message);
     playerTime = true;
   } else if (machineStatusValue > playerStatusValue) {
     rodadaMaquina();
     imprimeQuantidades();
-    var message = "Infelizmente a " + selectedStatus + " do adversário é melhor que a sua."
+    var message = "Utilizou " + selectedStatus + " para atacar.<br>Infelizmente a " + selectedStatus + " do adversário é melhor que a sua."
     showMessage(message);
     playerTime = false;
   } else {
     rodadaEmpate();
     imprimeQuantidades();
-    var message = "Aparentemente a " + selectedStatus + " do adversário é idêntica a sua."
+    var message = "Utilizou " + selectedStatus + " para atacar.<br>Aparentemente a " + selectedStatus + " do adversário é idêntica a sua."
     showMessage(message);
   }
 }
 
 function nextDuel() {
-  if (!gameOverVerify()) {
+  if (gameOverVerify()) {
     if(playerTime) {
     hiddeMessage();
     hiddeBattle();
@@ -401,11 +401,7 @@ function nextDuel() {
 }
 
 function gameOverVerify() {
-  if (baralhoJogador.length > 0 && baralhoMaquina.length > 0) {
-    return false;
-  } else {
-    return true;
-  }
+  return (baralhoJogador.length > 0 && baralhoMaquina.length > 0);
 }
 
 function hiddeAll() {
@@ -417,6 +413,8 @@ function hiddeAll() {
 
   var divScore = document.getElementById("main-score");
   divScore.style.display = "none";
+
+  hiddeMessage();
 }
 
 function showMessage(message) {
@@ -446,6 +444,8 @@ function cardAnalytics(cardToPlay) {
     return "defesa";
   } else if (cardToPlay.atributos.destreza > 2) {
     return "destreza";
+  } else if (cardToPlay.atributos.precisao == cardToPlay.atributos.destreza && cardToPlay.atributos.destreza == cardToPlay.atributos.forca && cardToPlay.atributos.forca == cardToPlay.atributos.defesa) {
+    return "precisao";
   } else {
     return "forca";
   }
@@ -454,6 +454,6 @@ function cardAnalytics(cardToPlay) {
 function machinePlay() {
   mostraCartaMaquina();
   showBattle();
-  var cardOnTop = baralhoMaquina[0];~
+  var cardOnTop = baralhoMaquina[0];
   resolveBattle(cardAnalytics(cardOnTop));
 }
