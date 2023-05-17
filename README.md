@@ -13,6 +13,8 @@ COMO JOGAR:
 
 Criado como forma de estudo e prática.
 
+🚀 Acesse: https://abchiarelli.github.io/SuperTrunfo/
+
 Tecnologias utilizadas: HTML, CSS e JavaScript.
 
 Site criado por Artur Chiarelli.
